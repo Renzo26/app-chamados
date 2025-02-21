@@ -1,0 +1,63 @@
+{
+  "name": "registro_chamados_app",
+  "version": "1.0.3",
+  "description": "Registro de Chamados",
+  "main": "main.js",
+  "scripts": {
+  "start": "electron .",
+  "package": "electron-builder --dir",
+  "prebuild": "mkdir resources || echo Pasta já existe && copy node_modules\\electron\\dist\\resources\\backend.exe resources\\backend.exe && copy node_modules\\electron\\dist\\resources\\api.exe resources\\api.exe",
+  "build": "electron-builder build --win --x64",
+  "build:nsis": "electron-builder build --win nsis --x64"
+},
+
+  "author": "Arthur Renzo",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+ "build": {
+  "appId": "com.arthurrenzo.registrochamados",
+  "productName": "Registro de Chamados",
+  "directories": {
+    "output": "dist"
+  },
+  "files": [
+    "**/*",
+    "!node_modules/electron-builder",
+    "!dist/"
+  ],
+  "extraResources": [
+    {
+      "from": "resources/backend.exe",
+      "to": "backend.exe"
+    },
+    {
+      "from": "resources/api.exe",
+      "to": "api.exe"
+    }
+  ],
+  "win": {
+    "target": [
+      "nsis",
+      "portable"
+    ],
+    "icon": "assets/icon.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Registro de Chamados",
+    "uninstallDisplayName": "Desinstalar Registro de Chamados",
+    "license": "LICENSE.txt"
+  }
+  
+}
+
+}

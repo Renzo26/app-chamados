@@ -1,0 +1,29 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.arthurrenzo.registrochamados
+productName: Registro de Chamados
+files:
+  - filter:
+      - '**/*'
+      - '!node_modules/electron-builder'
+      - '!dist/'
+extraResources:
+  - from: resources/backend.exe
+    to: backend.exe
+  - from: resources/api.exe
+    to: api.exe
+win:
+  target:
+    - nsis
+    - portable
+  icon: assets/icon.ico
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Registro de Chamados
+  uninstallDisplayName: Desinstalar Registro de Chamados
+  license: LICENSE.txt
+electronVersion: 34.2.0

@@ -1,0 +1,18 @@
+appId: com.example.registrodechamados
+productName: Registro de Chamados
+copyright: Copyright © 2025 Arthur Renzo
+directories:
+  output: release
+  app: . # Garante que o electron-builder empacote a partir do diretório raiz
+files:
+  - main.js
+  - preload.js
+  - index.html
+  - script.js
+  - style.css
+  - package.json
+  - node_modules/**/*
+  - resources/**/*  # Adicione esta linha para incluir a pasta 'resources'
+publish: null
+win:
+  target: nsis

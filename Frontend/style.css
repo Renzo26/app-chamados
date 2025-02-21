@@ -1,0 +1,195 @@
+/* Paleta de Cores */
+:root {
+    --bg-color: #f0f4f8;
+    --primary-color: #2979ff;
+    --secondary-color: #64b5f6;
+    --text-color: #333;
+    --hover-color: #1a237e;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Exemplo de fonte do Google Fonts */
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px; /* Aumentei o padding */
+    border-radius: 12px; /* Arredondei mais os cantos */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
+    width: 95%;
+    max-width: 1200px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px; /* Aumentei a margem inferior */
+}
+
+.total-chamados {
+    border: 1px solid #ddd;
+    padding: 12px; /* Aumentei o padding */
+    margin-bottom: 20px; /* Aumentei a margem inferior */
+    border-radius: 8px; /* Arredondei os cantos */
+    background-color: #f9f9f9;
+    font-size: 1.2em;
+    text-align: center;
+    color: var(--text-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    margin-bottom: 15px; /* Aumentei a margem inferior */
+}
+
+.search-bar label {
+    margin-right: 8px;
+}
+
+/* Estilos para o container das unidades (Principal) */
+#unidades-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px; /* Aumentei o padding */
+    margin-bottom: 15px;
+    overflow-x: auto;
+}
+
+/* Estilos para cada grupo de unidades */
+.unidade-grupo {
+    width: 22%; /* Para 4 grupos por linha */
+    border: 1px solid #ddd;
+    padding: 15px; /* Aumentei o padding */
+    margin: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    max-height: 350px; /* Ajustei a altura máxima */
+    overflow-y: auto;
+    border-radius: 10px; /* Arredondei os cantos */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.unidade-grupo h3 {
+    margin-top: 0;
+    margin-bottom: 15px; /* Aumentei a margem inferior */
+    font-size: 1.3em;
+    color: #fff;
+    background-color: var(--secondary-color); /* Usei a cor secundária */
+    padding: 10px;
+    border-radius: 8px; /* Arredondei os cantos */
+}
+
+/* Estilos Aprimorados para os botões das unidades */
+.unidade-button {
+    background-color: var(--primary-color); /* Usei a cor primária */
+    color: #fff;
+    border: none;
+    padding: 10px 15px; /* Ajustei o padding */
+    border-radius: 10px; /* Arredondei os cantos */
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+    margin: 5px; /* Aumentei a margem */
+    width: 160px; /* Ajustei a largura */
+    min-width: 0;
+    display: block;
+}
+
+.unidade-button:hover {
+    background-color: var(--hover-color); /* Usei a cor de hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; /* Aumentei a margem superior */
+}
+
+.buttons button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px; /* Ajustei o padding */
+    border-radius: 8px; /* Arredondei os cantos */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #1e7e34;
+}
+
+/* Estilos para o menu de contexto */
+.context-menu {
+    position: fixed;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Arredondei os cantos */
+    padding: 8px 0; /* Aumentei o padding */
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.context-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.context-menu li {
+    padding: 10px 20px; /* Ajustei o padding */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.context-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+#assinatura {
+    position: fixed;
+    bottom: 15px; /* Aumentei a margem inferior */
+    right: 15px; /* Aumentei a margem direita */
+    font-size: 0.8em;
+    color: #555;
+    opacity: 0.8;
+    z-index: 1000;
+}
+
+/* Estilos para a barra de rolagem vertical (Opcional - para customizar) */
+.unidade-grupo::-webkit-scrollbar {
+    width: 8px;
+}
+
+.unidade-grupo::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.unidade-grupo::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.unidade-grupo::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

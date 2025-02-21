@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Chamados</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Chamados</h1>
+    <div id="total-chamados" class="total-chamados"> Total de Chamados: <span id="total-chamados-numero">0</span> </div>
+    <div class="search-bar">
+      <label for="search">Filtrar Unidades:</label>
+      <input type="text" id="search" placeholder="Digite para filtrar...">
+    </div>
+    <!-- Container para os títulos dos grupos -->
+    <div id="unidades-grupos-container" class="unidades-grupos-container">
+      <!-- Títulos dos grupos serão adicionados aqui via JavaScript -->
+    </div>
+    <div id="container-unidades"></div>
+    <!-- Container para as unidades -->
+    <div id="unidades-container" class="unidades-container">
+      <!-- Unidades serão adicionadas aqui via JavaScript -->
+    </div>
+    <div class="buttons">
+      <button id="btnSalvar">Salvar</button>
+    </div>
+    <!-- Menu de Contexto -->
+    <div id="context-menu" class="context-menu">
+      <ul>
+        <li id="reset-context-item">Resetar Contadores</li>
+      </ul>
+    </div>
+  </div>
+  <div id="assinatura"> Desenvolvido por [Arthur Renzo ] </div>
+  <script src="./script.js"></script>
+</body>
+</html>
