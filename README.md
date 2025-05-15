@@ -1,60 +1,48 @@
-📝 Introdução
+# 📋 Registro de Chamados
 
-O Registro de Chamados é um software de gerenciamento de chamados para unidades de saúde. Ele permite registrar, visualizar e zerar contadores de chamados, salvando os dados em planilhas Excel. O projeto é desenvolvido utilizando Electron (frontend) e Flask (backend), garantindo uma interface moderna e uma API robusta.
+Sistema desktop para gerenciamento de chamados técnicos em unidades de saúde, com visual moderno, exportação de relatórios e controle simplificado por unidade.
 
-🚀 Tecnologias Utilizadas
+---
 
-Frontend: Electron, HTML, CSS, JavaScript.
+## 🧾 Sobre o Projeto
 
-Backend: Flask, Python, Pandas.
+O **Registro de Chamados** é um sistema desenvolvido para facilitar o acompanhamento e registro de atendimentos técnicos em unidades de saúde. Através de uma interface simples e funcional, é possível registrar, visualizar e zerar os chamados de forma eficiente. Os dados são armazenados localmente em JSON e exportados em planilhas Excel para análise e controle.
 
-Banco de Dados: JSON (possível melhoria futura para SQLite ou PostgreSQL).
+> 📌 Projeto desenvolvido por Arthur Renzo, com contribuição de Nicoly Ferreira de Paula na área de **Testes e Garantia da Qualidade (QA)**.
 
-Empacotamento: Electron Builder. 
+---
 
-📂 Estrutura do Projeto
+## 🚀 Tecnologias Utilizadas
+
+### 💻 Frontend:
+- Electron
+- HTML5
+- CSS3
+- JavaScript
+
+### 🛠 Backend:
+- Python 3 (Flask)
+- Pandas
+
+### 📦 Outras ferramentas:
+- JSON (armazenamento local)
+- Electron Builder (empacotamento e distribuição)
+
+---
+
+## 🗂 Estrutura de Pastas
 
 📦 Registro de Chamados
-┣ 📜 api.py            # Backend Flask (API)
-┣ 📜 backend.py        # Backend Flask (Processamento e Planilhas)
-┣ 📜 main.js           # Configuração do Electron
-┣ 📜 preload.js        # Integração com Electron
-┣ 📜 script.js         # Lógica de interface e chamadas à API
-┣ 📜 style.css         # Estilização da interface
-┣ 📜 index.html        # Interface principal
-┣ 📜 data.js           # Manipulação de arquivos JSON
-┣ 📜 package.json      # Configuração do projeto Electron
-┣ 📜 electron-builder.yaml  # Configuração do empacotamento
-┣ 📜 LICENSE.txt       # Licença do software
-┗ 📜 README.md         # Documentação do projeto
-
-💻 Frontend - Electron
-
-O frontend do projeto é desenvolvido com Electron e interage com o backend através de requisições HTTP.
-
-📌 Principais Arquivos:
-
-main.js: Configuração do Electron e execução do backend.
-
-script.js: Manipulação dos contadores e integração com a API.
-
-index.html: Interface gráfica do usuário.
-
-style.css: Estilização do frontend.
-
-⚙️ Fluxo de Funcionamento
-
-O Electron inicia o backend Flask automaticamente.
-
-A interface carrega os contadores das unidades de saúde.
-
-O usuário pode incrementar contadores, zerar chamados e salvar os dados.
-
-Os dados são enviados ao backend, que os armazena no JSON e gera uma planilha Excel.
-
-🏆 Autores
-
-📌 Desenvolvido por Arthur Renzo 🎯
-📌 Testes e QA por Nicoly Ferreira de Paula 🎯
-
-📝 Licença: MIT
+┣ 📜 api.py # API Flask (endpoints HTTP)
+┣ 📜 backend.py # Processamento e geração de planilhas
+┣ 📜 main.js # Lógica principal do Electron
+┣ 📜 preload.js # Comunicação segura com Electron
+┣ 📜 script.js # Integração entre frontend e API
+┣ 📜 data.js # Gerenciamento dos dados locais
+┣ 📜 index.html # Página principal da interface
+┣ 📜 style.css # Estilo visual
+┣ 📜 package.json # Configurações do projeto Electron
+┣ 📜 electron-builder.yaml # Definições para empacotamento
+┣ 📜 LICENSE.txt # Licença MIT
+┗ 📜 README.md # Documentação do projeto
+---
